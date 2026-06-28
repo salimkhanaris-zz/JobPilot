@@ -24,3 +24,6 @@ target/
 
 # Logs
 *.log
+
+.idea/
+*.iml
