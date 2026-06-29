@@ -1,37 +1,28 @@
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+
+import AppLayout from "@/layouts/AppLayout";
+
+import Dashboard from "@/pages/Dashboard";
+import Profiles from "@/pages/Profiles";
+import Jobs from "@/pages/Jobs";
+import Apply from "@/pages/Apply";
+import History from "@/pages/History";
+import Settings from "@/pages/Settings";
+
 function App() {
   return (
-    <main
-      style={{
-        height: "100vh",
-        display: "flex",
-        justifyContent: "center",
-        alignItems: "center",
-        backgroundColor: "#0F1117",
-        color: "#FFFFFF",
-        fontFamily:
-          "-apple-system, BlinkMacSystemFont, 'SF Pro Display', sans-serif",
-      }}
-    >
-      <div style={{ textAlign: "center" }}>
-        <h1
-          style={{
-            fontSize: "64px",
-            marginBottom: "12px",
-          }}
-        >
-          🚀 JobPilot
-        </h1>
-
-        <p
-          style={{
-            fontSize: "20px",
-            color: "#9CA3AF",
-          }}
-        >
-          Your AI Career Copilot
-        </p>
-      </div>
-    </main>
+    <BrowserRouter>
+      <Routes>
+        <Route element={<AppLayout />}>
+          <Route path="/" element={<Dashboard />} />
+          <Route path="/profiles" element={<Profiles />} />
+          <Route path="/jobs" element={<Jobs />} />
+          <Route path="/apply" element={<Apply />} />
+          <Route path="/history" element={<History />} />
+          <Route path="/settings" element={<Settings />} />
+        </Route>
+      </Routes>
+    </BrowserRouter>
   );
 }
 
