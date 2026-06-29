@@ -1,7 +1,13 @@
 export default function Dashboard() {
   return (
-    <h1 className="text-3xl font-bold">
-      Dashboard
-    </h1>
+    <div>
+      <h1 className="mb-2 text-4xl font-bold">
+        Welcome back 👋
+      </h1>
+
+      <p className="text-zinc-400">
+        Your AI Career Copilot is ready.
+      </p>
+    </div>
   );
 }

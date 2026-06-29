@@ -1,9 +1,11 @@
 export default function Header() {
   return (
-    <header className="border-b border-zinc-800 px-8 py-4">
-      <h1 className="text-xl font-semibold">
-        JobPilot
-      </h1>
+    <header className="flex h-16 items-center justify-between border-b border-zinc-800 px-8">
+      <div>
+        <h2 className="text-xl font-semibold">
+          Dashboard
+        </h2>
+      </div>
     </header>
   );
 }
